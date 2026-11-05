@@ -86,3 +86,10 @@ footer { color: var(--muted); font-size: 14px; padding: 30px 0 50px; border-top:
   article h1 { font-size: 25px; }
   nav a { margin-inline-start: 12px; font-size: 15px; }
 }
+
+/* English (LTR) section */
+html[dir="ltr"] { direction: ltr; }
+html[dir="ltr"] body { font-family: "Inter", "Segoe UI", Arial, sans-serif; }
+html[dir="ltr"] article th, html[dir="ltr"] article td { text-align: left; }
+.logo small { display: block; font-size: 12px; font-weight: 600; color: var(--muted); letter-spacing: .02em; }
+.lang-switch { font-size: 14px; }
