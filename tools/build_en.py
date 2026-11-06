@@ -65,7 +65,7 @@ def page(title, description, body, prefix, canonical, alt_he=None):
 <body>
 <header class="site"><div class="wrap">
   <a class="logo" href="{prefix}index.html">Dents<span>Guide</span><small>Family Dental Care</small></a>
-  <nav><a href="{prefix}index.html">Guides</a><a href="{prefix}about.html">About</a><a class="lang-switch" href="{prefix}../index.html" hreflang="he">עברית</a></nav>
+  <nav><a href="{prefix}index.html">Guides</a><a href="{prefix}about.html">About</a></nav>
 </div></header>
 <main class="wrap">
 {body}
@@ -108,7 +108,7 @@ def build():
     (OUT / "index.html").write_text(
         page("DentsGuide | Family Dental Care Guides",
              "Practical guides to choosing oral care products for kids and adults.", home, "", "/en/",
-             alt_he="/"), encoding="utf-8")
+             ), encoding="utf-8")
     about = ('<article><h1>About DentsGuide</h1>'
              '<p>DentsGuide helps parents and adults choose everyday oral care products: toothbrushes, toothpaste, '
              'flossers and the small tools that make brushing easier.</p>'
