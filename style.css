@@ -93,3 +93,5 @@ html[dir="ltr"] body { font-family: "Inter", "Segoe UI", Arial, sans-serif; }
 html[dir="ltr"] article th, html[dir="ltr"] article td { text-align: left; }
 .logo small { display: block; font-size: 12px; font-weight: 600; color: var(--muted); letter-spacing: .02em; }
 .lang-switch { font-size: 14px; }
+
+footer .aff { margin: 12px 0 0; padding: 10px 14px; background: #f6f8fa; border: 1px solid var(--line); border-radius: 8px; color: var(--ink, #222); }

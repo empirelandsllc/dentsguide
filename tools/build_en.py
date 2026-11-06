@@ -72,7 +72,7 @@ def page(title, description, body, prefix, canonical, alt_he=None):
 </main>
 <footer><div class="wrap">
 DentsGuide publishes general information about oral care products for families. It is not a substitute for advice from a dentist.
-{DISCLOSURE}
+<p class="aff"><strong>Affiliate disclosure:</strong> {DISCLOSURE}</p>
 </div></footer>
 </body>
 </html>
@@ -95,7 +95,7 @@ def build():
     for a in arts:
         body = markdown.markdown(shortcodes(a["body"]), extensions=["tables"])
         content = (f'<article><div class="tag">{html.escape(a["tag"])}</div><h1>{html.escape(a["title"])}</h1>'
-                   f'<div class="disclosure">{DISCLOSURE}</div>{body}</article>')
+                   f'{body}</article>')
         (OUT / "articles" / f'{a["slug"]}.html').write_text(
             page(a["title"] + " | DentsGuide", a["description"], content, "../",
                  f'/en/articles/{a["slug"]}.html'), encoding="utf-8")
